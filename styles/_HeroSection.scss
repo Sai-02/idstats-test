@@ -1,0 +1,108 @@
+.hero-section {
+  display: grid;
+  grid-template-columns: 3fr 10fr;
+}
+.hero-part-1 {
+  padding: 1rem;
+  background: rgb(193, 224, 207);
+  // border-right: 1px solid gray;
+  box-shadow: 2px 2px 2px #756e6eef;
+
+  .home {
+    text-align: center;
+    width: 100%;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  .solution {
+    text-align: center;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+}
+.utility-links {
+  width: 100%;
+  place-items: center;
+  margin-top: 3rem;
+  padding: 1rem;
+  display: grid;
+  gap: 0.6rem;
+  p {
+    font-size: 1rem;
+    justify-self: start;
+  }
+}
+.hero-part-2 {
+  padding: 3rem;
+  .title {
+    font-size: 2rem;
+  }
+}
+.steps-list-container {
+  padding: 1rem;
+}
+.steps-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  list-style: none;
+
+  li {
+    font-size: 1.2rem;
+    justify-self: center;
+    width: 100%;
+    text-align: center;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.underline {
+  border-bottom: 2px solid green;
+}
+// =========================================
+//
+//  form
+//
+// =========================================
+.form {
+  padding: 2rem;
+  padding-top: 5rem;
+  width: 100%;
+  text-align: center;
+}
+.file-link-input {
+  padding: 8px;
+  border: solid 2px green;
+  outline: none;
+  font-size: 1rem;
+  margin-right: 1rem;
+  &::placeholder {
+    font-size: 1rem;
+  }
+}
+.submit-btn {
+  padding: 8px;
+  background: green;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// =================================================================
+//
+// Media Quries
+//
+// =================================================================
+
+@media screen and (max-width: 900px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+  }
+  .hero-part-1 {
+    display: none;
+  }
+}

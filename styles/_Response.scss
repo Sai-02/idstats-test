@@ -1,0 +1,41 @@
+.response-section {
+  display: none;
+}
+.charts-wrapper {
+  display: grid;
+  grid-template-areas:
+    "a a b b"
+    "c c c c";
+  gap: 2rem;
+
+  article {
+    canvas {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+.emotion-chart-container {
+  grid-area: a;
+}
+.partOfSpeech-chart-container {
+  grid-area: b;
+  display: grid;
+  place-items: center;
+}
+.keyword-chart-container {
+  grid-area: c;
+}
+.response-input-container {
+  padding: 1rem;
+  label {
+    color: green;
+    font-size: 1.4rem;
+    margin-right: 1rem;
+  }
+  select {
+    font-size: 1rem;
+    color: green;
+    padding: 2px;
+  }
+}

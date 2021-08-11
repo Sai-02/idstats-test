@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/e54ef143c3.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- css -->
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-part-1">
+        <div class="nav-img-wrapper">
+          <div class="nav-img-container">
+            <img src="./logo.png" alt="" />
+          </div>
+        </div>
+
+        <div class="technical-round-container">Technical Round</div>
+      </div>
+      <div class="nav-part-2">
+        <ul class="nav-list">
+          <li>Home</li>
+          <li>Solutions</li>
+          <li>Pricing</li>
+          <li class="client-dashboard">Client Dashboard</li>
+          <li class="nav-login">
+            <span class="nav-login-info">
+              <p>Vinod Kolte</p>
+              <p>vinod@idstats.org</p>
+            </span>
+            <span class="nav-login-icon">
+              <i class="fas fa-user-circle"></i>
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-btn-container">
+        <div class="nav-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+    <!-- End of Navbar -->
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero-section">
+      <div class="hero-part-1">
+        <p class="home">
+          <i class="fas fa-home"></i> Client Dashboard
+          <i class="fas fa-caret-down"></i>
+        </p>
+        <p class="solution">
+          <i class="fas fa-lightbulb"></i> Solution
+          <i class="fas fa-caret-down"></i>
+        </p>
+        <div class="utility-links">
+          <p class="payment-history">
+            <i class="fas fa-history"></i>
+            Payment History
+          </p>
+          <p class="resources">
+            <i class="fa fa-search"></i>
+            Resources
+          </p>
+          <p class="help">
+            <i class="fas fa-question-circle"></i>
+            Help
+          </p>
+        </div>
+      </div>
+      <div class="hero-part-2">
+        <h1 class="title">Text Analysis</h1>
+        <div class="steps-list-container">
+          <ul class="steps-list">
+            <li>Create</li>
+            <li>Setup</li>
+            <li>Share</li>
+            <li>FieldWork Update</li>
+            <li class="underline">Report</li>
+          </ul>
+        </div>
+        <form class="form" onsubmit="handleSubmit(event)">
+          <input
+            type="link"
+            class="file-link-input"
+            id="file-link-input"
+            placeholder="./test.json"
+          />
+          <button
+            class="submit-btn"
+            onclick="handleSubmit(event)"
+            type="button"
+          >
+            Submit
+          </button>
+        </form>
+        <!-- response section -->
+        <div class="response-section" id="response-section">
+          <div class="response-input-container">
+            <label>Filter</label>
+            <select
+              id="response-select-tag"
+              onchange="handleSelectTag(event)"
+            ></select>
+          </div>
+          <div class="charts-wrapper">
+            <article class="emotion-chart-container">
+              <canvas id="emotion-chart"> </canvas>
+            </article>
+            <article class="partOfSpeech-chart-container">
+              <canvas id="partOfSpeech-chart"></canvas>
+            </article>
+            <article class="keyword-chart-container">
+              <canvas id="keyword-chart"> </canvas>
+            </article>
+          </div>
+        </div>
+        <!-- End of response section -->
+
+        <!-- Error Section -->
+        <div class="error-section" id="error-section">
+          <h2>Something went wrong 😔</h2>
+          <p>Kindly try again with proper link</p>
+        </div>
+        <!-- End of Error Section -->
+      </div>
+    </section>
+    <!-- End of Hero Section -->
+
+    <!-- Chart js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <!-- js -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
