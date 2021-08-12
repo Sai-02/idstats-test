@@ -39,3 +39,12 @@
     padding: 2px;
   }
 }
+@media screen and (max-width: 800px) {
+  .charts-wrapper {
+    grid-template-areas:
+      "a"
+      "b"
+      "c";
+    grid-template-columns: 1fr;
+  }
+}

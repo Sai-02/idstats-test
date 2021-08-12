@@ -224,6 +224,12 @@
   text-align: center;
 }
 
+.label-container {
+  font-size: 2rem;
+  color: green;
+  margin-bottom: 1rem;
+}
+
 .file-link-input {
   padding: 8px;
   border: solid 2px green;
@@ -325,6 +331,14 @@
   font-size: 1rem;
   color: green;
   padding: 2px;
+}
+
+@media screen and (max-width: 800px) {
+  .charts-wrapper {
+        grid-template-areas: "a" "b" "c";
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 .error-section {
